@@ -3,7 +3,7 @@ const connectDB = require('./models/connect');
 const bodyparser = require('body-parser');
 const app = express();
 
-app.use(bodyparser.json())       //here is the usage of bodypaser
+app.use(bodyparser.json())       //here is the usage of bodypasersss
 
 PORT = process.env.port || 3000
 
