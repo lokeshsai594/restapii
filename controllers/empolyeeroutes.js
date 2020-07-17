@@ -1,10 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
+const logger = require('../config/logger');
+const { json } = require('body-parser');
 const employee = mongoose.model('emp');
 
 router.get('/all', async (req, res) => {                     //to get all the records
      const post = await employee.find();
+     logger.log('info',`getall -> allthedetails -> ${post} `);
      res.json(post);
 });
 
